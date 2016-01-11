@@ -34,7 +34,7 @@ production:
   port: 3306
   encoding: utf8
   reconnect: false
-  database: desktop_master_dev
+  database: desktop_master
   pool: 5
   username: root
   password: 110110a

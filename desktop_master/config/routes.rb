@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'default#index'
   namespace 'api' do
-    get 'upload/logs'
+    post 'upload/logs'
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
