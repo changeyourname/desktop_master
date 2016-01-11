@@ -10,11 +10,22 @@
   </head>
   <body>
     挂机列表
-    </br>
+    <br/>
     <span style="color:red;font-size:14px;">
       <% @game_run_logs.each do |id| %>
         <a href="/detail?id=<%=id%>"><%=id%></a>
-        </br>
+        <br/>
+      <% end %>
+    </span>
+    <hr>
+    挂机详情 - <%= @game_run_log[0].no%> - <%= @game_run_log[0].user%>
+    <br/>
+    <span style="font-size:14px;">
+      <% i = @game_run_log.size %>
+      <% @game_run_log.each do |log| %>
+        <%= "#{i} - #{log.created_at.to_s(:local)} - [#{log.log}]"%>
+        <% i = i - 1 %>
+        <br/>
       <% end %>
     </span>
   </body>

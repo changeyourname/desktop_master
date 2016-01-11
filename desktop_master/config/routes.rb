@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'default#index'
+  get 'detail', controller: 'default', action: 'detail'
   namespace 'api' do
     post 'upload/logs'
   end

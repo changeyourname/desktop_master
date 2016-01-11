@@ -36,5 +36,7 @@ module DesktopMaster
       g.test_framework   :rspec, :fixture => true, :views => false
       g.integration_tool :rspec, :fixture => true, :views => true
     end
+    config.active_record.default_timezone = :local  
+    config.time_zone = 'Beijing'
   end
 end
